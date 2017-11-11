@@ -1,0 +1,31 @@
+table, th, td {
+    border: 1px solid black;
+}
+tr {
+    padding: 10px;
+}
+.asdf {
+    margin: 30px;
+}
+.aasdf {
+    padding: 20px;
+}
+.centerBold {
+    text-align: center;
+    font-weight: bold;
+}
+.textAhead {
+    color: green;
+}
+.textBehind {
+    color: red;
+}
+.textBlue {
+    color: blue;
+}
+.textBlack {
+    color: black;
+}
+.compareTable {
+    padding: 30px;
+}
