@@ -30504,6 +30504,20 @@
 	        } else {
 	            timeDifference = player1Time - player2Time;
 	        }
+	        if (player1Time == 0 && player2Time == 0) {
+	            className = ['textBlack', 'textBlack'];
+	        } else if (player1Time == 0 && player2Time > 0) {
+	            className = ['textBlack', 'textBlue'];
+	        } else if (player1Time > 0 && player2Time == 0) {
+	            className = ['textBlue', 'textBlack'];
+	        } else if (player1Time - player2Time < 0) {
+	            className = ['textAhead', 'textBehind'];
+	        } else {
+	            className = ['textBehind', 'textAhead'];
+	        }
+	        if (typeof timeDifference == 'number') {
+	            timeDifference = timeDifference.toFixed(2);
+	        }
 	        if (player1Time >= 60) {
 	            var seconds = player1Time % 60;
 	            if (seconds < 10) {
@@ -30523,20 +30537,6 @@
 	            } else {
 	                player2Time = '1:' + _seconds.toFixed(2);
 	            }
-	        }
-	        if (player1Time == 0 && player2Time == 0) {
-	            className = ['textBlack', 'textBlack'];
-	        } else if (player1Time == 0 && player2Time > 0) {
-	            className = ['textBlack', 'textBlue'];
-	        } else if (player1Time > 0 && player2Time == 0) {
-	            className = ['textBlue', 'textBlack'];
-	        } else if (player1Time - player2Time < 0) {
-	            className = ['textAhead', 'textBehind'];
-	        } else {
-	            className = ['textBehind', 'textAhead'];
-	        }
-	        if (typeof timeDifference == 'number') {
-	            timeDifference = timeDifference.toFixed(2);
 	        }
 	        // ------
 	        return _react2.default.createElement(
