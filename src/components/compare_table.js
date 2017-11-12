@@ -38,7 +38,7 @@ const CompareTable = (props) => {
             className = ['textBlue', 'textBlack'];
         } else if (player1Time - player2Time < 0) {
             className = ['textAhead', 'textBehind'];
-        } else {
+        } else if (player1Time - player2Time > 0){
             className = ['textBehind', 'textAhead'];
         }
         if (typeof(timeDifference) == 'number') {
