@@ -7,9 +7,9 @@ class Compare extends Component {
         super(props)
 
         this.state = {
-            player1: 'habbe',
+            player1: '',
             player1id: '',
-            player2: 'tridenttail',
+            player2: '',
             player1id: '',
             levels: []
         }
